@@ -1,4 +1,3 @@
-
 from alpine:latest
 RUN apk add --no-cache py3-pip \
     && pip3 install --upgrade pip
@@ -8,7 +7,7 @@ COPY . /app
 
 RUN pip3 --no-cache-dir install -r requirements.txt
 
-EXPOSE 8050
+EXPOSE 5000
 
 ENTRYPOINT ["python3"]
 CMD ["index.py"]
